@@ -3,9 +3,10 @@ import { createContext, useEffect, useState } from "react";
 const NavigationContext = createContext();
 
 function NavigationProvider({ children }) {
-  const [currentPath, setPath] = useState(window.location.pathname);
+  const [currentPath, setPath] = useState('/DropDown');
 
   useEffect(() => {
+    window.history.pushState({}, "", '/DropDown');
     const handler = () => {
       setPath(window.location.pathname);
     };

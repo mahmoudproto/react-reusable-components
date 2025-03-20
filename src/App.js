@@ -6,34 +6,29 @@ import ButtonPage from "./Pages/ButtonPage";
 import ModalPage from "./Pages/ModalPage";
 import TablePage from "./Pages/TablePage";
 import CounterPage from "./Pages/CounterPage";
-import { useEffect, useRef } from "react";
 
 function APP() {
-  //added to solve uploading to github pages default page that has an diffrent intial pathname thank '/'
-  const homePagePath = useRef("/");
-  useEffect(() => {
-    homePagePath.current = window.location.pathname;
-  }, []);
+  
   return (
     <div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
       <Sidebar />
       <div className="col-span-5">
-        <Route path={homePagePath.current}>
+        <Route path={"/DropDown"}>
           <DropDownPage />
         </Route>
-        <Route path={"/accordion"}>
+        <Route path={"/Accordion"}>
           <AccordionPage />
         </Route>
-        <Route path={"/buttons"}>
+        <Route path={"/Buttons"}>
           <ButtonPage />
         </Route>
-        <Route path={"/table"}>
+        <Route path={"/Table"}>
           <TablePage />
         </Route>
-        <Route path={"/modal"}>
+        <Route path={"/Modal"}>
           <ModalPage />
         </Route>
-        <Route path={"/count"}>
+        <Route path={"/Count"}>
           <CounterPage />
         </Route>
       </div>

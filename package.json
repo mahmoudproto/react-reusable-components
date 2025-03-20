@@ -1,7 +1,7 @@
 {
   "name": "comps",
   "version": "0.1.0",
-  "homepage": "https://mahmoudproto.github.io/react-reusable-components-/",
+  "homepage": "https://mahmoudproto.github.io/react-reusable-components/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
